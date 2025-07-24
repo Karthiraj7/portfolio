@@ -1,11 +1,23 @@
 .navbar {
-  background-color: #0f0f0f; /* black or near black */
+  width: 100vw;
+  background-color: #0f0f0f;
   padding: 10px 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* Logo left, links right */
   align-items: center;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -28,7 +40,7 @@
 
 .contact-button {
   background-color: white;
-  color: black;
+  color: black !important;
   padding: 6px 16px;
   border-radius: 20px;
   font-weight: bold;
@@ -37,4 +49,22 @@
 
 .contact-button:hover {
   background-color: #dddddd;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 35px;
+  }
 }
