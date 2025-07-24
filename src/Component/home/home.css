@@ -1,104 +1,162 @@
+/* Base Container */
 .home-container {
-  position: relative;
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
-  font-family: Arial, sans-serif;
-  color: #000;
+  font-family: "Arial", sans-serif;
+  position: relative;
 }
 
-/* Left and right sections clipped */
+/* Left Section Styling */
 .left-section {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 50%;
-  height: 100%;
-  background-color: #e6e6e6;
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-  padding: 60px;
-  z-index: 1;
-}
-
-.right-section {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #000;
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-  color: white;
+  background-color: #e5e5e5;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  padding: 100px 60px 60px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 60px;
-  z-index: 0;
-}
-
-.intro {
-  margin-top: 100px;
+  justify-content: center;
+  z-index: 2;
 }
 
 .intro p {
   font-size: 20px;
-  margin-bottom: 0;
+  margin: 0;
+  color: #333;
 }
 
 .intro h1 {
-  font-size: 40px;
+  font-size: 44px;
   font-weight: bold;
   margin: 10px 0;
+  color: #111;
 }
 
 .intro h2 {
   font-size: 18px;
-  color: #999;
+  color: #888;
+  margin-bottom: 20px;
 }
 
 .social-icons {
-  margin-top: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-.social-icons a {
-  margin-right: 15px;
+.social-icons img {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease;
 }
 
-.profile-img {
-  text-align: center;
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Right Section Styling */
+.right-section {
+  width: 50%;
+  background-color: #000;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 .profile-img img {
+  max-width: 100%;
   width: 350px;
-  border-radius: 10px;
-  margin-left: 100px;
+  border-radius: 12px;
 }
 
+/* Bottom Bar Styling */
 .bottom-bar {
   position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #1a1a1a;
-  color: white;
+  color: #fff;
   padding: 30px;
   text-align: center;
-  z-index: 1000;
+  z-index: 3;
 }
 
 .brand-name {
-  font-weight: bold;
   font-size: 18px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
 .description {
-  font-size: 12px;
+  font-size: 13px;
   max-width: 600px;
   margin: 0 auto 10px;
+  line-height: 1.5;
 }
 
 .read-more {
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: underline;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    clip-path: none;
+    width: 100%;
+    padding: 50px 40px;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+  }
+
+  .profile-img img {
+    width: 300px;
+  }
+
+  .bottom-bar {
+    position: relative;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .intro p,
+  .intro h2 {
+    font-size: 14px;
+  }
+
+  .profile-img img {
+    width: 250px;
+  }
+
+  .bottom-bar {
+    padding: 20px;
+  }
 }
