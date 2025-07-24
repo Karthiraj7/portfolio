@@ -1,0 +1,125 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.left-section {
+  background-color: #e6e6e6;
+  flex: 1;
+  padding: 50px;
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  left: 0;
+}
+
+.right-section {
+  background-color: #000;
+  color: white;
+  flex: 1;
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.intro {
+  margin-top: 100px;
+}
+
+.intro p {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.intro h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.intro h2 {
+  font-size: 18px;
+  color: #999;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 16px;
+  margin-bottom: auto;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-img {
+  text-align: center;
+}
+
+.profile-img img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.note {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 30px;
+  margin-top: auto;
+  flex-direction: column;
+  text-align: center;
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 12px;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: white;
+  font-size: 12px;
+  text-decoration: underline;
+}

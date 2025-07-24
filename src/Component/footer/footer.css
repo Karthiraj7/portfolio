@@ -1,0 +1,42 @@
+.site-footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.back-to-top {
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.back-to-top:hover {
+  color: #ccc;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: #bbb;
+}
