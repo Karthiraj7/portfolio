@@ -1,45 +1,47 @@
-/* ContactForm.css */
 .contact-section {
-  background: #f2f2f2;
+  background: linear-gradient(to bottom, #f2f2f2, #e0e0e0);
   padding: 80px 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-title {
-  font-size: 2.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  border: 3px solid #000;
+  border: 4px solid #000;
   display: inline-block;
   padding: 10px 30px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   margin-bottom: 20px;
 }
 
 .contact-subtitle {
-  font-size: 0.95rem;
-  color: #333;
+  font-size: 0.9rem;
+  color: #000;
   max-width: 700px;
-  margin: 0 auto 20px;
+  margin: 10px auto 30px;
   line-height: 1.5;
 }
 
 .contact-divider {
-  width: 80px;
+  width: 60px;
   height: 4px;
-  margin: 20px auto 50px;
-  border-bottom: 2px solid #000;
   border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  margin-bottom: 40px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
 }
 
 .contact-form input,
@@ -47,31 +49,58 @@
   width: 100%;
   padding: 12px 15px;
   border: none;
-  border-bottom: 2px solid #000;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
   background: transparent;
-  font-size: 1rem;
+  font-size: 0.9rem;
   outline: none;
-  resize: none;
+  color: #000;
+  margin-bottom: 10px;
 }
 
 .contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  background: transparent;
+  font-size: 0.9rem;
+  outline: none;
+  color: #000;
   height: 120px;
-  border: 2px solid #000;
+  resize: none;
   margin-top: 10px;
 }
+
 
 .contact-form button {
-  margin-top: 10px;
-  padding: 10px 30px;
-  background: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  position: relative;
+  background: transparent;
+  color: #000;
   font-weight: bold;
+  letter-spacing: 4px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
   transition: all 0.3s ease;
-  letter-spacing: 1px;
+  margin-top: 50px;
 }
 
-.contact-form button:hover {
-  background: #333;
+.contact-form button::before,
+.contact-form button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+
+.contact-form button::before {
+  left: 0;
+}
+
+.contact-form button::after {
+  right: 0;
 }
