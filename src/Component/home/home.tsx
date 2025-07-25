@@ -29,7 +29,10 @@ const Home: React.FC = () => {
       <div className="bottom-bar">
         <div className="brand-name">IT BERRIES</div>
         <p className="description">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra...
+          Let’s build something amazing together.
+
+Whether you have a question, want to collaborate, or just want to say hi, I’m open to opportunities and projects.
+
         </p>
         <a href="#" className="read-more">READ MORE</a>
       </div>

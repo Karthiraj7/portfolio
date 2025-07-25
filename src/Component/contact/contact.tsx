@@ -37,10 +37,14 @@ export default function ContactForm() {
   return (
     <div className="contact-section" id="contact">
       <h1 className="contact-title">CONTACT</h1>
-      <p className="contact-subtitle">
-        Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus.
-        Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est.
-      </p>
+     <p className="contact-subtitle">
+  Let’s build something amazing together. <br />
+  I’m always excited to connect with fellow developers, recruiters, or teams <br className="hide-on-desktop" />
+  looking for a <strong>passionate SharePoint & Frontend Developer</strong>.
+  <br />
+  📬 Drop a message or reach me through the form below.
+</p>
+
       <div className="contact-divider"></div>
 
       <form onSubmit={handleSubmit} className="contact-form">
