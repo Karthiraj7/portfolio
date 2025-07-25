@@ -22,11 +22,11 @@ const Navbar: React.FC = () => {
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         {/* Mobile order: Portfolio, Contact Me, Skills, About me */}
        
-        <li><a href="#skills">Skills</a></li>
-         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills" className="button">Skills</a></li>
+         <li><a href="#portfolio" className="button">Portfolio</a></li>
       
-        <li><a href="#about">About me</a></li>
-          <li><a href="#contact" className="contact-button">Contact Me</a></li>
+        <li><a href="#about" className="button">About me</a></li>
+          <li><a href="#contact" className="button">Contact Me</a></li>
       </ul>
     </nav>
   );
