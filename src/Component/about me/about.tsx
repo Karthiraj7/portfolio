@@ -1,6 +1,6 @@
 import './about.css';
 import MAINTENANCE from '../../assets/icon/backend-development.png'
-import KARTHIRAJ from '../../assets/Karthir.jpg'
+import KARTHIRAJ from '../../assets/Karthiraj.jpg'
 import DESIGN   from  '../../assets/icon/design.png'
 import DEVELOPMENT from '../../assets/icon/images.jpg'
 
