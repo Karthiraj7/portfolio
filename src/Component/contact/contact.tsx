@@ -1,29 +1,37 @@
 import React, { useState } from "react";
 import "./contact.css";
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
+export default function ContactForm() {
+  const [result, setResult] = useState<string>("");
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending...");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Form submitted successfully!");
+    formData.append("access_key", "a59b9d54-8c67-4139-80ac-82a468c2d97e");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form submitted successfully!");
+        form.reset();
+      } else {
+        console.error("Submission error:", data);
+        setResult(data.message || "Submission failed. Try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setResult("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -36,14 +44,31 @@ const ContactForm: React.FC = () => {
       <div className="contact-divider"></div>
 
       <form onSubmit={handleSubmit} className="contact-form">
-        <input type="text" name="name" required placeholder="ENTER YOUR NAME*" value={formData.name} onChange={handleChange} />
-        <input type="email" name="email" required placeholder="ENTER YOUR EMAIL*" value={formData.email} onChange={handleChange} />
-        <input type="tel" name="phone" placeholder="PHONE NUMBER" value={formData.phone} onChange={handleChange} />
-        <textarea name="message" required placeholder="YOUR MESSAGE*" value={formData.message} onChange={handleChange} />
+        <input
+          type="text"
+          name="name"
+          placeholder="ENTER YOUR NAME*"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="ENTER YOUR EMAIL*"
+          required
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="PHONE NUMBER"
+        />
+        <textarea
+          name="message"
+          placeholder="YOUR MESSAGE*"
+          required
+        ></textarea>
         <button type="submit">SUBMIT</button>
+        <span className="form-result">{result}</span>
       </form>
     </div>
   );
-};
-
-export default ContactForm;
+}
