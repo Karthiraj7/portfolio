@@ -3,6 +3,7 @@ import mail from "../../assets/Vector (2).svg";
 import git from "../../assets/github symbol.svg";
 import linkedin from "../../assets/linkedin symbol.svg";
 import Karthi from "../../assets/karthi.jpg"
+import { Link } from 'react-router-dom';
 import'./home.css'
 const Home: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
 Whether you have a question, want to collaborate, or just want to say hi, I’m open to opportunities and projects.
 
         </p>
-        <a href="#" className="read-more">READ MORE</a>
+        <Link to="/resume" className="read-more">READ MORE</Link>
       </div>
     </div>
   );

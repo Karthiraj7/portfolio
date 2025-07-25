@@ -11,3 +11,21 @@
   justify-content: center;
   flex-direction: column;
 } */
+/* App.css or global styles */
+
+.resume-section {
+  background: url('./assets/resume-bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Optional: semi-transparent glass effect on top */
+.resume-template {
+  background-color: rgba(255, 255, 255, 0.95); /* light glass effect */
+  /* max-width: 1000px; */
+  margin: auto;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}

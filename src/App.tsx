@@ -5,8 +5,10 @@ import Skills from './Component/skill/skill';
 import ContactForm from './Component/contact/contact';
 import Footer from './Component/footer/footer';
 import Navbar from './Component/header/header';
+import Resume from './Component/Resume/Resume';
 
 function App() {
+  
   return (
     <div className="App">
       <section>
@@ -27,6 +29,9 @@ function App() {
       </section>
       <section>
         <Footer/>
+      </section>
+      <section>
+        <Resume/>
       </section>
     </div>
   );

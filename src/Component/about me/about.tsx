@@ -1,26 +1,27 @@
 import './about.css';
-import MAINTENANCE from '../../assets/icon/backend-development.png'
-import KARTHIRAJ from '../../assets/Karthiraj.jpg'
-import DESIGN   from  '../../assets/icon/design.png'
-import DEVELOPMENT from '../../assets/icon/images.jpg'
+import MAINTENANCE from '../../assets/icon/backend-development.png';
+import KARTHIRAJ from '../../assets/Karthiraj.jpg';
+import DESIGN from '../../assets/icon/design.png';
+import DEVELOPMENT from '../../assets/icon/images.jpg';
 
 const About = () => {
   return (
     <section className="about-section">
-     
-
       <h2 className="about-title">ABOUT ME</h2>
-      <br></br>
- <img
+      <br />
+
+      <img
         src={KARTHIRAJ}
         alt="Karthi Raj"
         className="about-avatar"
       />
+
       <p className="about-subtitle">
-        I am a Front-end / Full Stack Developer with a focus on Microsoft 365 solutions. I specialize in building scalable applications using SharePoint Framework (SPFx), Power Apps, and React. With a strong understanding of modern UI/UX design principles, I create impactful, role-based enterprise tools for businesses.
-        <br />
-        <br />
-        Currently working as a Junior Software Engineer at Technomax Systems India Pvt Ltd, I design and develop interactive dashboards, internal automation forms, and integrations with Microsoft Graph API.
+        Hi, I’m <strong>Karthi Raj</strong> — a passionate Front-end / Full Stack Developer specializing in Microsoft 365 technologies.
+        <br /><br />
+        I craft scalable, role-based enterprise applications using modern frameworks like SharePoint Framework (SPFx), React, and Power Platform tools. With a strong eye for UI/UX and responsive design, I transform business needs into smart, interactive tools.
+        <br /><br />
+        Currently, I work as a Junior Software Engineer at Technomax Systems India Pvt Ltd. I build custom dashboards, dynamic forms, and integrate Microsoft Graph API to deliver data-rich solutions that improve collaboration and productivity.
       </p>
 
       <div className="explore-wrapper">
@@ -40,9 +41,9 @@ const About = () => {
           <img src={DESIGN} alt="Design Icon" className="card-icon" />
           <h3>DESIGN</h3>
           <p>
-            Skilled in responsive and modern UI/UX with HTML5, CSS3, and React.
+            I design clean, modern interfaces using HTML5, CSS3, and React. Skilled in translating ideas into pixel-perfect layouts with a mobile-first approach.
             <br />
-            Proficient in creating pixel-perfect designs and component-based layouts for seamless user experience.
+            My designs prioritize usability, performance, and visual impact.
           </p>
         </div>
 
@@ -50,9 +51,9 @@ const About = () => {
           <img src={DEVELOPMENT} alt="Development Icon" className="card-icon" />
           <h3>DEVELOPMENT</h3>
           <p>
-            Experienced in building SPFx web parts, Power Apps, and API integrations.
+            I develop custom solutions with SPFx, Power Apps, and Microsoft Graph API.
             <br />
-            Strong ability to work with RESTful services and Microsoft Graph API for dynamic content delivery.
+            Whether it’s building web parts or data-driven portals, I create secure and scalable applications tailored to business needs.
           </p>
         </div>
 
@@ -60,9 +61,7 @@ const About = () => {
           <img src={MAINTENANCE} alt="Maintenance Icon" className="card-icon" />
           <h3>MAINTENANCE</h3>
           <p>
-            Handle end-to-end delivery, version control with Git, and performance optimization.
-            <br />
-            Efficient in debugging, refactoring legacy code, and managing version upgrades in SharePoint solutions.
+            I manage deployments, version upgrades, and ongoing enhancements. From debugging to performance tuning, I ensure solutions run reliably and evolve with your requirements.
           </p>
         </div>
       </div>
