@@ -27,45 +27,19 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       <h1 className="contact-title">CONTACT</h1>
       <p className="contact-subtitle">
-        Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. 
+        Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus.
         Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est.
       </p>
       <div className="contact-divider"></div>
-      
+
       <form onSubmit={handleSubmit} className="contact-form">
-        <input
-          type="text"
-          name="name"
-          required
-          placeholder="ENTER YOUR NAME*"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="ENTER YOUR EMAIL*"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <input
-          type="tel"
-          name="phone"
-          placeholder="PHONE NUMBER"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        <textarea
-          name="message"
-          required
-          placeholder="YOUR MESSAGE*"
-          value={formData.message}
-          onChange={handleChange}
-        />
+        <input type="text" name="name" required placeholder="ENTER YOUR NAME*" value={formData.name} onChange={handleChange} />
+        <input type="email" name="email" required placeholder="ENTER YOUR EMAIL*" value={formData.email} onChange={handleChange} />
+        <input type="tel" name="phone" placeholder="PHONE NUMBER" value={formData.phone} onChange={handleChange} />
+        <textarea name="message" required placeholder="YOUR MESSAGE*" value={formData.message} onChange={handleChange} />
         <button type="submit">SUBMIT</button>
       </form>
     </div>

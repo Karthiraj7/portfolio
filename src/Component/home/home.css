@@ -8,6 +8,7 @@
   overflow: hidden;
   font-family: "Arial", sans-serif;
   position: relative;
+  flex-wrap: wrap;
 }
 
 /* Left Section Styling */
@@ -15,12 +16,16 @@
   width: 50%;
   background-color: #e5e5e5;
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-  padding: 100px 60px 60px;
+  padding: 100px 60px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+}
+
+.intro {
+  max-width: 500px;
 }
 
 .intro p {
@@ -30,14 +35,14 @@
 }
 
 .intro h1 {
-  font-size: 44px;
+  font-size: clamp(28px, 6vw, 44px);
   font-weight: bold;
   margin: 10px 0;
   color: #111;
 }
 
 .intro h2 {
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
   color: #888;
   margin-bottom: 20px;
 }
@@ -45,6 +50,7 @@
 .social-icons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .social-icons img {
@@ -72,7 +78,7 @@
 
 .profile-img img {
   max-width: 100%;
-  width: 350px;
+  width: clamp(200px, 40vw, 350px);
   border-radius: 12px;
 }
 
@@ -107,7 +113,9 @@
   text-decoration: underline;
 }
 
-/* Responsive Layouts */
+/* ====== RESPONSIVE ====== */
+
+/* Tablet and below */
 @media (max-width: 1024px) {
   .home-container {
     flex-direction: column;
@@ -117,15 +125,13 @@
   .right-section {
     clip-path: none;
     width: 100%;
-    padding: 50px 40px;
+    padding: 50px 30px;
+    align-items: center;
+    text-align: center;
   }
 
-  .intro h1 {
-    font-size: 34px;
-  }
-
-  .profile-img img {
-    width: 300px;
+  .intro {
+    max-width: 100%;
   }
 
   .bottom-bar {
@@ -133,16 +139,8 @@
   }
 }
 
+/* Mobile phones */
 @media (max-width: 600px) {
-  .intro {
-    text-align: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   .intro h1 {
     font-size: 28px;
   }
@@ -153,10 +151,14 @@
   }
 
   .profile-img img {
-    width: 250px;
+    width: 220px;
   }
 
   .bottom-bar {
     padding: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }

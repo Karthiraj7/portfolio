@@ -10,8 +10,8 @@ const Home: React.FC = () => {
       <div className="left-section">
         <div className="intro">
           <p>Hi, I am</p>
-          <h1>Tomasz Gajda</h1>
-          <h2>Front-end Developer / UI Designer</h2>
+          <h1>Karthi Raj </h1>
+          <h2>Front-end Developer / FullStack Developer</h2>
           <div className="social-icons">
             <a href="#"><img src={mail} alt="Email" /></a>
             <a href="#"><img src={git} alt="GitHub" /></a>

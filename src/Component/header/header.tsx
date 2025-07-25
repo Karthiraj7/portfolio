@@ -20,15 +20,14 @@ const Navbar: React.FC = () => {
       </div>
 
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-        {/* Mobile order: Portfolio, Contact Me, Skills, About me */}
-       
         <li><a href="#skills">Skills</a></li>
-         <li><a href="#portfolio">Portfolio</a></li>
-      
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About me</a></li>
-          <li><a href="#contact" className="contact-button">Contact Me</a></li>
+        <li><a href="#contact" className="contact-button">Contact Me</a></li>
       </ul>
     </nav>
+
+   
   );
 };
 
