@@ -38,13 +38,19 @@
   color: #cccccc;
 }
 
-.contact-button {
+.button {
   background-color: white;
   color: black !important;
   padding: 6px 16px;
   border-radius: 20px;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: black;
+  color: white !important;
+  cursor: pointer;
 }
 
 .contact-button:hover {
