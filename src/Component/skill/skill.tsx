@@ -62,7 +62,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="skills-group">
+      {/* <div className="skills-group">
         <h3>LEARNING:</h3>
         <div className="skills-grid">
           <div className="skill-item">
@@ -82,7 +82,7 @@ const Skills = () => {
             <p>TYPESCRIPT</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -125,9 +125,12 @@
   .right-section {
     clip-path: none;
     width: 100%;
-    padding: 50px 30px;
-    align-items: center;
-    text-align: center;
+    padding-top: 100px !important ;
+    padding: 50px 40px;
+  }
+
+  .intro h1 {
+    font-size: 34px;
   }
 
   .intro {
