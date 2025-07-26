@@ -5,54 +5,63 @@ import {
   FaEnvelope,
   FaLinkedin,
   FaGithub,
+  FaDownload,
+  FaTimesCircle,
 } from 'react-icons/fa';
 
 import Profile from '../../assets/karthi.jpg';
 import CV from '../../assets/pdf/Karthi_Raj_KR_resume.pdf';
 import Swal from 'sweetalert2';
-// import DownloadIcon from '../../assets/icon/cv.jpg'; // <- Use your actual icon path
 
 const handleDownload = () => {
   Swal.fire({
     icon: 'success',
-   
     text: 'Your CV is now downloaded.',
     timer: 2000,
     showConfirmButton: false,
   });
 
-  // Trigger download after alert
   const link = document.createElement('a');
   link.href = CV;
   link.download = 'Karthi_Raj_KR_Resume.pdf';
   link.click();
 };
+
+ const handleClose = () => {
+    window.location.href = "/App"; // This navigates back to App ("/")
+  };
 const Resume: React.FC = () => {
   return (
     <>
-  <div className="resume-top-buttons">
-  <div className="download-cv-sidebar">
-      <button onClick={handleDownload} title="Download CV">
-      <span>Download CV</span>
-    </button>
-  </div>
+      {/* Top Action Buttons */}
+      <div className="resume-top-buttons">
+        <div className="download-cv-sidebar">
+          <button onClick={handleDownload} title="Download CV">
+            <FaDownload /> <span>Download CV</span>
+          </button>
+        </div>
 
-  <div className="resume-close-icon">
-    <a href="#home" title="Back to Home">✖</a>
-  </div>
-</div>
+        <div className="resume-close-icon">
+         <button
+       onClick={handleClose}
+        title="Back to Home"
+        style={{ background: "none", border: "none", cursor: "pointer" }}
+      >
+        <FaTimesCircle />
+      </button>
 
+        </div>
+      </div>
+
+      {/* Resume Outer Container */}
       <div className="resume-outer">
         <div className="resume-inner">
-          
-          {/* LEFT SIDEBAR */}
+
+          {/* Sidebar */}
           <aside className="resume-sidebar">
             <div className="profile-pic-wrap">
               <img src={Profile} alt="Karthi Raj" className="profile-pic" />
             </div>
-
-            {/* Download CV Button */}
-            
 
             <div className="sidebar-section">
               <h3>Contact</h3>
@@ -80,7 +89,7 @@ const Resume: React.FC = () => {
             </div>
           </aside>
 
-          {/* MAIN SECTION */}
+          {/* Main Resume Content */}
           <main className="resume-main">
             <header>
               <h1>Karthi Raj KR</h1>
