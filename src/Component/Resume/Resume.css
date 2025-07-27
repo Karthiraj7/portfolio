@@ -5,19 +5,50 @@
   justify-content: center;
   align-items: center;
   padding: 100px;
-  background: linear-gradient(-45deg, #ffffff 50%, #1a1919 50%);
+  background: linear-gradient(
+    -45deg,
+    #ffffff 50%,
+    #1a1919 50%
+  );
 }
 
-/* ========= TOP BUTTONS OUTSIDE ========= */
-.resume-close-icon {
+
+.resume-top-buttons {
   position: fixed;
   top: 30px;
-  right: 40px;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 9999;
 }
 
-.resume-close-icon a,
-.resume-close-icon button {
+/* Styles already declared but shown for context */
+.download-cv-sidebar button {
+  font-size: 14px;
+  background-color: #1a1818;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.download-cv-sidebar button:hover {
+  background-color: #333;
+}
+
+
+
+
+.resume-close-icon a {
   font-size: 20px;
   background: #111;
   color: #fff;
@@ -27,55 +58,12 @@
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: background 0.3s;
-  border: none;
-  cursor: pointer;
 }
-
-.resume-close-icon a:hover,
-.resume-close-icon button:hover {
-  background: #333;
-}
-
-.resume-download-outside {
-  position: fixed;
-  top: 30px;
-  left: 40px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.resume-download-outside a {
-  font-size: 14px;
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: 0.3s ease;
-}
-
-.resume-download-outside a:hover {
-  background-color: #333;
-}
-
-.download-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4));
-}
-
 /* ========= RESUME CONTAINER (Glassmorphic) ========= */
 .resume-inner {
   display: flex;
   width: 100%;
+
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -138,7 +126,6 @@
   flex: 1;
   padding: 40px 30px;
   color: #111;
-  word-wrap: break-word;
 }
 
 .resume-main header h1 {
@@ -181,17 +168,68 @@
   color: #333;
 }
 
-.resume-section p {
-  font-size: 20px;
-  color: #333;
-  font-family: 'Segoe UI', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  word-break: break-word;
+/* ========= CLOSE BUTTON (Top Right) ========= */
+.resume-close-icon {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  z-index: 9999;
 }
 
-/* ========= RESPONSIVE STYLES ========= */
+.resume-close-icon a {
+  font-size: 20px;
+  background: #111;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+.resume-close-icon a:hover {
+  background: #333;
+}
+
+/* ========= DOWNLOAD CV BUTTON (Top Left) ========= */
+.resume-download-outside {
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-download-outside a {
+  font-size: 14px;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+.resume-download-outside a:hover {
+  background-color: #333;
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4));
+}
+
+/* ========= RESPONSIVE ========= */
 @media screen and (max-width: 1024px) {
   .resume-inner {
     flex-direction: column;
@@ -208,24 +246,15 @@
   }
 
   .resume-close-icon a,
-  .resume-close-icon button,
   .resume-download-outside a {
     padding: 6px 10px;
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .resume-outer {
-    padding: 60px 20px;
-  }
-
-  .resume-main {
-    padding: 20px 15px;
-  }
-
+@media screen and (max-width: 600px) {
   .resume-main header h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .resume-section h2 {
@@ -237,53 +266,15 @@
   }
 
   .resume-section ul li {
-    font-size: 0.95rem;
-  }
-
-  .resume-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .resume-close-icon,
-  .resume-download-outside {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-  }
-
-  .resume-close-icon {
-    right: 15px;
-  }
-
-  .resume-download-outside {
-    left: 15px;
+    font-size: 0.9rem;
   }
 }
-
-@media screen and (max-width: 480px) {
-  .resume-main header h1 {
-    font-size: 1.4rem;
-  }
-
-  .resume-section h2 {
-    font-size: 0.95rem;
-  }
-
-  .resume-section ul li,
-  .resume-section p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .resume-close-icon a,
-  .resume-close-icon button,
-  .resume-download-outside a {
-    font-size: 13px;
-    padding: 5px 10px;
-  }
-
-  .resume-outer {
-    padding: 40px 10px;
-  }
+/* Style all <p> inside resume-section to match li style */
+.resume-section p {
+  font-size: 20px;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }

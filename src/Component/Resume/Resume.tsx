@@ -28,7 +28,7 @@ const handleDownload = () => {
 };
 
  const handleClose = () => {
-    window.location.href = "/App"; // This navigates back to App ("/")
+    window.location.href = "/"; // This navigates back to App ("/")
   };
 const Resume: React.FC = () => {
   return (
